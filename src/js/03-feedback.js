@@ -27,10 +27,10 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   formErrors.length = 0;
   if (formState.email.trim().length == 0) {
-    formErrors.push("Uzupełnij pole 'Email'!");
+    formErrors.push("Fill 'Email'!");
   }
   if (formState.message.trim().length == 0) {
-    formErrors.push("Uzupełnij pole 'Message'!");
+    formErrors.push("Fill 'Message'!");
   }
   if (!formErrors.length) {
     console.log(formState);
@@ -41,7 +41,7 @@ form.addEventListener('submit', event => {
     formMessage.innerHTML = ``;
   } else {
     formMessage.innerHTML = `
-    <h4>Przed wysłaniem proszę poprawić błędy:</h4>
+    <h4>Please correct before send:</h4>
             <ul>
                 ${formErrors.map(el => `<li>${el}</li>`).join('')}
             </ul>
